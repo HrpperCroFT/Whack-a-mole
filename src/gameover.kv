@@ -1,0 +1,11 @@
+#:kivy 1.0.9
+
+<GameOver>:
+    id: gameover
+    padding: 50
+    spacing: 10
+    result_button: result_button
+    Button:
+        id: result_button
+        text: "New game"
+        on_release: gameover.close_window()
