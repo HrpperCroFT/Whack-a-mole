@@ -1,0 +1,21 @@
+#:kivy 1.0.9
+
+<Menu>:
+    id: menu
+    BoxLayout:
+        orientation: "vertical"
+        padding: 50
+        spacing: 10
+        new_game: new_game
+        Button:
+            id: new_game
+            text: "New game"
+            on_press: menu.start_game()
+        Button:
+            id: best_scores
+            text: "Best scores"
+            on_press: menu.open_scores()
+        Button:
+            id: settings
+            text: "Settings"
+            on_press: root.manager.current = "settings_screen"

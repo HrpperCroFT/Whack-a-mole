@@ -5,10 +5,12 @@ class Mole(Button):
         super(Mole, self).__init__(**kwargs)
         self.text = "No mole"
         self.isout = False
-        self.background_color = (0, 0, 0, 0)
+        self.background_color = (0.5, 1, 1, 1)
+        
     def appear(self):
         self.text = "I'm here, hello"
         self.isout = True
+        
     def on_press(self):
         last_state = self.isout
         self.text = "No mole"

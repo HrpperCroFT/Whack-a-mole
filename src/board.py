@@ -1,4 +1,5 @@
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 from kivy.uix.progressbar import ProgressBar as KivyProgressBar
 from kivy.uix.label import Label
 import src.mole as mole
@@ -24,14 +25,14 @@ class Board(BoxLayout):
         box.add_widget(self.progressbar)
         box.add_widget(self.counter_label)
         self.add_widget(box)
+        self.game_board = GridLayout(cols = cntx)
         for _ in range(cnty):
-            nbox = BoxLayout(orientation = "horizontal", spacing = 10)
             for i in range(cntx):
                 lastmole = mole.Mole()
                 lastmole.on_press = self.decorator(lastmole.on_press)
-                nbox.add_widget(lastmole)
+                self.game_board.add_widget(lastmole)
                 self.moles.append(lastmole)
-            self.add_widget(nbox)
+        self.add_widget(self.game_board)
     def decorator(self, func):
         def wrapper(*args, **kwargs):
             if func(*args, *kwargs):

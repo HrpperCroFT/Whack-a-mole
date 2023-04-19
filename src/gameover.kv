@@ -2,10 +2,12 @@
 
 <GameOver>:
     id: gameover
-    padding: 50
-    spacing: 10
     result_button: result_button
-    Button:
-        id: result_button
-        text: "New game"
-        on_release: gameover.close_window()
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'       
+        Button:
+            id: result_button
+            text: "New game"
+            size_hint: [.3, .3]
+            on_release: root.manager.current = "menu_screen"
