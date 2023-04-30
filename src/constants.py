@@ -23,4 +23,4 @@ class Data():
     SCORE_SHOW_SUFFIX = "! Please, write your name here."
     
     def __init__(self):
-        pass
+        NotImplemented
