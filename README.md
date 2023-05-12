@@ -3,6 +3,7 @@
 
 # How to run application
 >Windows — run Whack-a-mole.bat
+
 >Linux or MacOS — execute Whack-a-mole.sh
 
 # How to play
