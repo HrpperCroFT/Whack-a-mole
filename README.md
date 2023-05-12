@@ -14,7 +14,7 @@ This screen contains ther buttons: "New game", "Best scores" and "Settings"
 
 * `"New game" button` creates new game screen and switches to it
 
-* '"Best scores" button` swithes to screen with best ten scores
+* `"Best scores" button` swithes to screen with best ten scores
 
 * `"Settings" button` switches to screen with options
 
