@@ -185,7 +185,7 @@ class WhackApp(App):
         
         def wrapper(*args, **kwargs):
             func(*args, **kwargs)
-            match self.current_difficult:
+            match self.current_difficulty:
                 case Difficulty.easy:
                     self.current_difficulty = Difficulty.normal
                     self.settings_screen.difficulty_button.text = \
