@@ -1,0 +1,24 @@
+#:kivy 1.0.9
+
+<GameOver>:
+    id: gameover
+    result_button: result_button
+    name_input: name_input
+    showing_score: showing_score
+    Image:
+        source: root.background_image
+    BoxLayout:
+        orientation: "vertical"
+        padding: [250, 250, 200, 250]
+        Label:
+            id: showing_score
+            text: "Your score ! Input your name"
+            size_hint: [None, 0.2]
+        TextInput:
+            id: name_input
+            
+        Button:
+            id: result_button
+            text: "Save result"
+            size_hint: [None, .3]
+            on_release: gameover.get_name()

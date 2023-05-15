@@ -1,0 +1,23 @@
+#:kivy 1.0.9
+
+<Settings>:
+    id: settings
+    difficulty_button: difficulty_button
+    Image:
+        source: root.background_image
+    BoxLayout:
+        orientation: "vertical"
+        padding: 200
+        spacing: 10
+        Button:
+            id: difficulty_button
+            text: "Current difficulty: Easy"
+            on_press: settings.change_difficulty()
+        Button:
+            id: delete_saves
+            text: "Delete all scores"
+            on_press: settings.saves_delete()
+        Button:
+            id: get_back
+            text: "Back"
+            on_press: root.manager.current = "menu_screen"
